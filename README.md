@@ -1,2 +1,2 @@
 # kzaudio
-a simple audio framework for use in games
+a compact audio framework suitable for 2D games
