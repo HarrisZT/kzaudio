@@ -1,22 +1,22 @@
 /*****************************************************************************\ 
-| Copyright(C) 2019-2024 KZGAMES. All Rights Reserved.                        |
-| Author: Zachary T Harris                                                    |
-| 																			  |
-| File: kzaudiodecoder.h 										              |
-| Desc: abstract base type interface for audio decoders     	              |
-|     																		  |
-| This program is free software: you can redistribute it and/or modify		  |
-| it under the terms of the GNU General Public License as published by		  |
-| the Free Software Foundation, either version 3 of the License, or			  |
-| (at your option) any later version.										  |
-| 																			  |
-| This program is distributed in the hope that it will be useful,			  |
-| but WITHOUT ANY WARRANTY; without even the implied warranty of			  |
-| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the				  |
-| GNU General Public License for more details.								  |
-| 																			  |
-| You should have received a copy of the GNU General Public License			  |
-| along with this program.  If not, see <http://www.gnu.org/licenses/>.		  |
+| Copyright(C) 2019-2024 KZGAMES. All Rights Reserved.                         
+| Author: Zachary T Harris                                                    
+| 																			   
+| File: kzaudiodecoder.h 										               
+| Desc: abstract base type interface for audio decoders     	               
+|     																		   
+| This program is free software: you can redistribute it and/or modify		   
+| it under the terms of the GNU General Public License as published by		   
+| the Free Software Foundation, either version 3 of the License, or			  
+| (at your option) any later version.										  
+| 																			  
+| This program is distributed in the hope that it will be useful,			   
+| but WITHOUT ANY WARRANTY; without even the implied warranty of			   
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the				  
+| GNU General Public License for more details.								  
+| 																			  
+| You should have received a copy of the GNU General Public License			   
+| along with this program.  If not, see <http://www.gnu.org/licenses/>.		   
 ******************************************************************************/
 #ifndef __KZAUDIODECODER_H__
 #define __KZAUDIODECODER_H__
@@ -32,19 +32,19 @@ namespace kz {
 	public:
 		virtual ~AudioDecoder() {}
 
-		/**	open an audio file for decoding
-			@param desc: structure to fill with audio properties
-			@return    : true if successfully opened, else false*/
+		/**open an audio file for decoding
+		   @param desc: structure to fill with audio properties
+		   @return    : true if successfully opened, else false*/
 		virtual Bool Open(IObuf* file, AudioDesc* desc) = 0;
 
-		/**	read audio samples from the file
-			@param samples: sample array to be filled
-			@param imax   : maximum samples to be read
-			@return       : samples read (may be less than imax)*/
+		/**read audio samples from the file
+		   @param samples: sample array to be filled
+		   @param imax   : maximum samples to be read
+		   @return       : samples read (may be less than imax)*/
 		virtual Uint64 Read(Int16* samples, Uint64 imax) = 0;
 
-		/**	change the read position to the given sample offset
-			@param offset: index of sample to go to (relative to beginning)*/
+		/**change the read position to the given sample offset
+		   @param offset: index of sample to go to (relative to beginning)*/
 		virtual Void Seek(Uint64 offset) = 0;
 	};
 
@@ -69,7 +69,7 @@ namespace kz {
 		Uint32  m_bytesPerSample;
 		Uint64  m_bufferStart;
 		Uint64  m_bufferEnd;
-	};
+        };
 
 
 
