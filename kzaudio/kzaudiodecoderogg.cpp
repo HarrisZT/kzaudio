@@ -19,7 +19,7 @@
 | along with this program.  If not, see <http://www.gnu.org/licenses/>.		  |
 ******************************************************************************/
 #include "oggvorbis/vorbisfile.h"
-#include "kzaudiodecoder.h" 
+#include "kzaudiodecoder.h"
 namespace kz {
 
 
